@@ -17,7 +17,7 @@ def index():
     if request.method == "GET":
         fabricators = db.get_fabricators()
         return render_template("index.html", fabricators = fabricators)
-
+    
 #Ruta de administrador
 @app.route('/admin', methods=["GET", "POST"])
 def admin():
