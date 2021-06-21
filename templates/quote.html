@@ -8,9 +8,23 @@
     <h1>Cotización #{{quote[0]}}</h1>
 {% endif %}
 
-<form action="POST">
-    
+<section class="quotations-cards">
+    <div class="card one-card">
+        <h3>Cotizacion <span>#</span> {{quote[0]}}</h3>
+        <div class="line"></div>
+        <p class="card-attribute">Cliente</p>
+        <p class="card-value">{{quote[1]}}</p>
+        <p class="card-attribute">Fabricante</p>
+        <p class="card-value">{{quote[2]}}</p>
+        <p class="card-attribute">Modelo</p>
+        <p class="card-value">{{quote[3]}}</p>
+        <p class="card-attribute">Mensaje</p>
+        <p class="card-value card-message" >{{quote[4]}}</p>
 
-</form>
+</div>
+</section>
+
+
+
 
 {% endblock %}

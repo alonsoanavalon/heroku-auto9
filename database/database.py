@@ -335,7 +335,22 @@ class DataBase:
         self.connection.commit()
         quote = self.cursor.fetchone()
         return quote
-        
+    def delete_quotation(self, id):
+        try:
+            if id == None:
+                raise Exception("No se ha ingresado ningún id")
+            else:
+                sql = "DELETE FROM cotizacion WHERE id = {}".format(id)
+                self.cursor.execute(sql)
+                self.connection.commit()
+        except Exception:
+            raise
+    def get_message(self, id):
+        sql = "SELECT cotizacion.id, cliente.nombre as Cliente,cotizacion.fabricante as Fabricante, cotizacion.modelo as Modelo, cotizacion.mensaje as Mensaje FROM cotizacion INNER JOIN cliente ON cliente.id = cotizacion.cliente_id WHERE cotizacion.id = {}".format(id)
+        self.cursor.execute(sql)
+        self.connection.commit()
+        quote = self.cursor.fetchone()
+        return quote
 
 
     

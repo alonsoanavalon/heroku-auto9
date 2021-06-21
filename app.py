@@ -185,6 +185,11 @@ def all_quotations():
             if method == "view":
                 quote = db.get_message(id)
                 return render_template("quote.html", quote = quote)
+            elif method == "delete":
+                db.delete_quotation(id)
+                return redirect('/admin/quotations/all')
+
+
               
 
 

@@ -24,19 +24,53 @@
 </section>
 */
 
+* {
+    box-sizing: border-box;
+}
+
+.line {
+    height:1px;
+    width:100%;
+    background-color: $primary-color;
+    margin-bottom:.5rem;
+}
+
 .quotations-cards {
     display: flex;
     padding:0 1rem;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
+    width:100%;
     flex-wrap: wrap;
     margin:2rem 0;
+    gap:1rem;
+
+    h3 {
+        padding:1rem 0;
+
+        span {
+            color:$primary-color;
+        }
+    }
+
+
+
+    
     .card {
-        width:50%;
+        width:47%;
+        max-width:600px;
+        min-height:300px;
         padding-top:1rem;
-        .card-value,
-        .card-attribute {
+        border:1px solid #ccc;
+        padding:1rem;
+        position: relative;
+        border-radius: .5rem;
+        -webkit-border-radius: .5rem;
+        -moz-border-radius: .5rem;
+        -ms-border-radius: .5rem;
+        -o-border-radius: .5rem;
+        .card-value,.card-attribute{
             text-align: left;
         }
 
@@ -45,7 +79,38 @@
             font-weight: 600;
             padding-top:.5rem;
         }
+
+        .card-message {
+            max-height:200px;
+            overflow:auto;
+            padding:.5rem;
+            width:100%;
+            border:1px solid #ccc;
+            max-height:200px;
+            margin-top:.8rem;
+            border-radius: .2rem;
+            -webkit-border-radius: .2rem;
+            -moz-border-radius: .2rem;
+            -ms-border-radius: .2rem;
+            -o-border-radius: .2rem;
+
+            display: flex;
+            flex-direction: column;
+        }
     
     }
 
+    .one-card {
+        width:50%;
+        min-width: 300px;
+    }
+
+}
+
+
+#get-quotations {
+    a {
+        color:#fff;
+        text-decoration: none;
+    }
 }

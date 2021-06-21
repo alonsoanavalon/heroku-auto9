@@ -538,7 +538,8 @@ img {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  padding: 3rem; }
+  padding: 3rem;
+  border: 2px solid #f1f0f0; }
   .users .users-options {
     display: flex;
     align-items: center;
@@ -667,11 +668,15 @@ img {
   margin-top: 4rem;
   display: flex;
   width: 100%;
-  justify-content: space-around; }
+  justify-content: space-around;
+  border: 2px solid #f1f0f0;
+  padding: 2rem; }
   .products .products-options {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    color: #fff;
+    text-decoration: none; }
     .products .products-options a:nth-child(1) {
       text-decoration: none;
       font-size: 1.2rem;
@@ -787,23 +792,69 @@ img {
     {% endif %}
 </section>
 */
+* {
+  box-sizing: border-box; }
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #4C6EA7;
+  margin-bottom: .5rem; }
+
 .quotations-cards {
   display: flex;
   padding: 0 1rem;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  width: 100%;
   flex-wrap: wrap;
-  margin: 2rem 0; }
+  margin: 2rem 0;
+  gap: 1rem; }
+  .quotations-cards h3 {
+    padding: 1rem 0; }
+    .quotations-cards h3 span {
+      color: #4C6EA7; }
   .quotations-cards .card {
-    width: 50%;
-    padding-top: 1rem; }
-    .quotations-cards .card .card-value,
-    .quotations-cards .card .card-attribute {
+    width: 47%;
+    max-width: 600px;
+    min-height: 300px;
+    padding-top: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    position: relative;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem; }
+    .quotations-cards .card .card-value, .quotations-cards .card .card-attribute {
       text-align: left; }
     .quotations-cards .card .card-attribute {
       font-weight: 600;
       padding-top: .5rem; }
+    .quotations-cards .card .card-message {
+      max-height: 200px;
+      overflow: auto;
+      padding: .5rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      max-height: 200px;
+      margin-top: .8rem;
+      border-radius: .2rem;
+      -webkit-border-radius: .2rem;
+      -moz-border-radius: .2rem;
+      -ms-border-radius: .2rem;
+      -o-border-radius: .2rem;
+      display: flex;
+      flex-direction: column; }
+  .quotations-cards .one-card {
+    width: 50%;
+    min-width: 300px; }
+
+#get-quotations a {
+  color: #fff;
+  text-decoration: none; }
 
 * {
   margin: 0;
