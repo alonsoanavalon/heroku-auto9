@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 {% extends "layout.html" %}
 
 
 {% block content %}
+
+
 <section class="main-index">
     <a class="admin-btn" href="/admin">Panel de administrador</a>
 </section>
@@ -23,8 +26,16 @@
         {% endfor %}
     </select>
     {% endif %}
+
+    {% if models %}
     <label for="model">Modelo</label>
-    <input type="text" name="model">
+    <select name="model">
+        {% for model in models -%}
+        <option value="{{model[2]}}">{{model[2]}}</option>
+        {% endfor %}
+    </select>
+    {% endif %}
+
     <label for="message">Requerimientos</label>
     <textarea name="message"></textarea>
     <input type="submit">
@@ -34,4 +45,18 @@
 
 
 
+=======
+{% extends "layout.html" %}
+
+
+{% block content %}
+<section class="main-index">
+    <a class="admin-btn" href="/admin">Panel de administrador</a>
+</section>
+
+
+
+
+
+>>>>>>> 0bda20bd28948ad8f035e735437996e297167a76
 {% endblock %}

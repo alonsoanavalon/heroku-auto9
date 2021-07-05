@@ -34,6 +34,9 @@
     background-color: $primary-color;
     margin-bottom:.5rem;
 }
+h2 {
+    padding:2rem 0;
+}
 
 .quotations-cards {
     display: flex;
@@ -45,6 +48,8 @@
     flex-wrap: wrap;
     margin:2rem 0;
     gap:1rem;
+
+ 
 
     h3 {
         padding:1rem 0;
@@ -64,12 +69,27 @@
         padding-top:1rem;
         border:1px solid #ccc;
         padding:1rem;
-        position: relative;
         border-radius: .5rem;
         -webkit-border-radius: .5rem;
         -moz-border-radius: .5rem;
         -ms-border-radius: .5rem;
         -o-border-radius: .5rem;
+
+        .card-header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            padding:0 1.5rem;
+
+            a {
+                text-decoration: none;
+            }
+
+
+        }
+
         .card-value,.card-attribute{
             text-align: left;
         }
